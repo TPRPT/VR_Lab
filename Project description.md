@@ -1,7 +1,7 @@
 # Training scenario
 
 ## Title: 
-Pizza Time
+Ding dong, Pizza!
 
 ## Target audience: 
 Gamers who want to experience VR motorcycle driving
