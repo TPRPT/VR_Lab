@@ -4,7 +4,7 @@
 Space Adventure
 
 ## Target audience: 
-[Target audience]
+Gamers who are interested in space exploration and adventure
 
 ## What is the project? (short sentence):
 [Describe your project in a short sentence, an elevator pitch]
