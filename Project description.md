@@ -1,30 +1,29 @@
 # Training scenario
 
 ## Title: 
-Space Adventure
+[Title]
 
 ## Target audience: 
-Gamers who are interested in space exploration and adventure
+Gamers who want to experience VR motorcycle driving
 
 ## What is the project? (short sentence):
-[Describe your project in a short sentence, an elevator pitch]
-The user needs to avoid enemies and transport something with their spaceship or travel to another planet.
+Deliver the pizza on time, without problems
 
 ## Mechanics or Objectives: 
 [what the player should be able to do inside the application?]
-1. Thing A
-2. Thing B
+1. Driving motorcycle
+2. Mini-game
 
 ## Success criteria:
 [what the user needs to do to win?]
-- Success 1
-- Success 2
+- Deliverying pizza on time
+- Solve the problems while delivering pizza
 
 ## Failure criteria
 Success criteria (what the user needs to do to win):
 [what would be a failure?]
-- Failure 1
-- Failure 2
+- Time Out
+- Damaged Pizza
 
 ## Scene description
 ### Where?
