@@ -1,7 +1,7 @@
 # Training scenario
 
 ## Title: 
-[Title]
+Space Adventure
 
 ## Target audience: 
 [Target audience]
