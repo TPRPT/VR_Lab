@@ -8,6 +8,7 @@ Gamers who are interested in space exploration and adventure
 
 ## What is the project? (short sentence):
 [Describe your project in a short sentence, an elevator pitch]
+The user needs to avoid enemies and transport something with their spaceship or travel to another planet.
 
 ## Mechanics or Objectives: 
 [what the player should be able to do inside the application?]
