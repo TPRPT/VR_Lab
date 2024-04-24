@@ -1,7 +1,7 @@
 # Training scenario
 
 ## Title: 
-[Title]
+Pizza Time
 
 ## Target audience: 
 Gamers who want to experience VR motorcycle driving
@@ -28,6 +28,7 @@ Success criteria (what the user needs to do to win):
 ## Scene description
 ### Where?
 [Where does your application take place?]
+- On the road
 
 ### Static objects
 [Which objects appear in your scene and do not move?]
