@@ -12,7 +12,7 @@ Deliver the pizza on time, without problems
 ## Mechanics or Objectives: 
 [what the player should be able to do inside the application?]
 1. Driving motorcycle
-2. Mini-game
+2. Mini-game (deliver pizza by throwing it while riding on a motorcycle)
 
 ## Success criteria:
 [what the user needs to do to win?]
@@ -23,7 +23,8 @@ Deliver the pizza on time, without problems
 Success criteria (what the user needs to do to win):
 [what would be a failure?]
 - Time Out
-- Accident
+- More than three accidents occur
+- Losing points: traffic signal violation
 
 ## Scene description
 ### Where?
@@ -32,7 +33,7 @@ Success criteria (what the user needs to do to win):
 
 ### Static objects
 [Which objects appear in your scene and do not move?]
-- Roads and Surrounding Landscapes
+- Surrounding Landscapes: traffic lights, signboards, houses, trees, etc.
 
 ### Dynamic objects
 [Which objects appear in your scene that can be moved or interacted with?]
@@ -43,6 +44,7 @@ Success criteria (what the user needs to do to win):
 [Which sounds are used?]
 - Engine
 - Horn
+- Warning
 
 ### Locomotion
 [Choose one]
