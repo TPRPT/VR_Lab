@@ -17,13 +17,13 @@ Deliver the pizza on time, without problems
 ## Success criteria:
 [what the user needs to do to win?]
 - Deliverying pizza on time
-- Solve the problems while delivering pizza
+- Without any accidents
 
 ## Failure criteria
 Success criteria (what the user needs to do to win):
 [what would be a failure?]
 - Time Out
-- Damaged Pizza
+- Accident
 
 ## Scene description
 ### Where?
@@ -32,18 +32,17 @@ Success criteria (what the user needs to do to win):
 
 ### Static objects
 [Which objects appear in your scene and do not move?]
-- Object A
-- Object B
+- Roads and Surrounding Landscapes
 
 ### Dynamic objects
 [Which objects appear in your scene that can be moved or interacted with?]
-- Object A
-- Object B
+- Motorcycle
+- Another vehicles and pedestrians
 
 ### Sounds:
 [Which sounds are used?]
-- Sound 1
-- Sound 2
+- Engine
+- Horn
 
 ### Locomotion
 [Choose one]
