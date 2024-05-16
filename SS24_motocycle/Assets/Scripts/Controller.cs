@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -11,14 +7,16 @@ public class NewBehaviourScript : MonoBehaviour
 
     [HideInInspector] public Vector3 velocity;
     public Rigidbody sphereRB, BikeBody;
-    // public GameObject Handle;
+    public GameObject Handle;
     public AudioSource engineSound;
     public GameObject ForntTyre;
     public GameObject BackTyre;
+    public AnimationCurve turningCurve;
 
 
     public float maxSpeed, acceleration, steerStrength, gravity, bikeTiltIncrement = .09f,
-        zTiltAngle = 45f, handleRotVal = 30f, handleRotSpeed = .15f, tyreRotSpeed = 10000f;
+        zTiltAngle = 45f, handleRotVal = 30f, handleRotSpeed = .15f, tyreRotSpeed = 10000f,
+        norDrag = 2f, driftDrag = 0.5f;
     
     
     [Range(1,10)]
@@ -56,8 +54,8 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Movement();
 
-        // ForntTyre.transform.Rotate(Vector3.right, Time.deltaTime * tyreRotSpeed *currentVelocityOffset);
-        // BackTyre.transform.Rotate(Vector3.right, Time.deltaTime * tyreRotSpeed *currentVelocityOffset);
+        ForntTyre.transform.Rotate(Vector3.right, Time.deltaTime * tyreRotSpeed *currentVelocityOffset);
+        BackTyre.transform.Rotate(Vector3.right, Time.deltaTime * tyreRotSpeed *currentVelocityOffset);
 
         EngineSound();
     }
@@ -71,6 +69,7 @@ public class NewBehaviourScript : MonoBehaviour
                 Acceleration();
                 Rotation();
             }
+            Rotation();
             Brake();
         }
         else
@@ -87,9 +86,9 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Rotation()
     {
-        transform.Rotate(0, steerInput * moveInput * currentVelocityOffset * steerStrength * Time.fixedDeltaTime, 0, Space.World);
+        transform.Rotate(0, steerInput * moveInput * turningCurve.Evaluate(Mathf.Abs(currentVelocityOffset)) * steerStrength * Time.fixedDeltaTime, 0, Space.World);
 
-        // Handle.transform.localRotation = Quaternion.Slerp(Handle.transform.localRotation, Quaternion.Euler(Handle.transform.localRotation.eulerAngles.x, handleRotVal * steerInput, Handle.transform.localRotation.eulerAngles.z), handleRotSpeed);
+        Handle.transform.localRotation = Quaternion.Slerp(Handle.transform.localRotation, Quaternion.Euler(Handle.transform.localRotation.eulerAngles.x, handleRotVal * steerInput, Handle.transform.localRotation.eulerAngles.z), handleRotSpeed);
     }
 
     void BikeTilt()
@@ -114,12 +113,20 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             sphereRB.velocity *= brakingFactor / 10;
+            sphereRB.drag = driftDrag;
+        }
+        else
+        {
+            sphereRB.drag = norDrag;
         }
     }
 
     bool Grounded()
     {
-        if (Physics.Raycast(sphereRB.position, Vector3.down, out hit, rayLength, derivableSurface))
+        float radius = rayLength - 0.02f;
+        Vector3 origin = sphereRB.transform.position + radius * Vector3.up;
+
+        if (Physics.SphereCast(origin, radius + 0.02f, -transform.up, out hit, rayLength, derivableSurface))
         {
             return true;
         }

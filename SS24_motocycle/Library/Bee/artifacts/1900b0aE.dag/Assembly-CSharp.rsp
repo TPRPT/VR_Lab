@@ -354,7 +354,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Scripts/CarSpawner.cs"
 "Assets/Scripts/Controller.cs"
+"Assets/Scripts/MainCanvas.cs"
+"Assets/Scripts/Traffic.cs"
+"Assets/Scripts/TrafficMovement.cs"
+"Assets/Scripts/Waypoint.cs"
+"Assets/Scripts/WaypointManager.cs"
 -langversion:9.0
 /deterministic
 /optimize+
