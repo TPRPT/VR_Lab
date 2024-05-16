@@ -15,7 +15,7 @@ public class WaypointManager : MonoBehaviour
 
     // UI
     public TMP_Text timer;
-    public float currentTime = 0;
+    public float currentTime = 60;
 
     public TMP_Text point;
     public float score = 0;
@@ -60,10 +60,10 @@ public class WaypointManager : MonoBehaviour
 
     void Timer()
     {
-        currentTime += Time.deltaTime;
-        timer.text = currentTime.ToString("F0");
+        currentTime -= Time.deltaTime;
+        timer.text = "Time: " + currentTime.ToString("F0");
 
-        if (currentTime >= 60)
+        if (currentTime <= 0)
         {
             timer.text = "Time Over";
             TimeOver();
@@ -72,7 +72,7 @@ public class WaypointManager : MonoBehaviour
 
     void Point()
     {
-        point.text = score.ToString();
+        point.text = "Score: " + score.ToString();
     }
 
     void PlusPoint()
