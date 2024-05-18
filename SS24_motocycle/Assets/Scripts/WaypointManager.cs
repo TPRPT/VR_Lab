@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class WaypointManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class WaypointManager : MonoBehaviour
     
 
     // UI
+    public Button GameStart;
     public TMP_Text timer;
     public float currentTime = 60;
 
