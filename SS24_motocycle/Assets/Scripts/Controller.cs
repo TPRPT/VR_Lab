@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Controller : MonoBehaviour
 {
     RaycastHit hit;
     float moveInput, steerInput, rayLength, currentVelocityOffset;
@@ -19,8 +19,7 @@ public class NewBehaviourScript : MonoBehaviour
         norDrag = 2f, driftDrag = 0.5f;
     
     
-    [Range(1,10)]
-    public float brakingFactor;
+    [Range(1,10)] public float brakingFactor;
     public float minPitch = 0;
     public float maxPitch;
     public LayerMask derivableSurface;
@@ -33,15 +32,12 @@ public class NewBehaviourScript : MonoBehaviour
         BikeBody.transform.parent = null;
 
         rayLength = sphereRB.GetComponent<SphereCollider>().radius + 0.2f;
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveInput = Input.GetAxis("Vertical");
-        steerInput = Input.GetAxis("Horizontal");
+        Driving();
 
         transform.position = sphereRB.transform.position;
         BikeBody.MoveRotation(transform.rotation);
@@ -58,6 +54,12 @@ public class NewBehaviourScript : MonoBehaviour
         BackTyre.transform.Rotate(Vector3.right, Time.deltaTime * tyreRotSpeed *currentVelocityOffset);
 
         EngineSound();
+    }
+
+    void Driving()
+    {
+        moveInput = Input.GetAxis("Vertical");
+        steerInput += Input.GetAxis("Mouse X") / 10;
     }
 
     void Movement()
