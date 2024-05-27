@@ -3,7 +3,10 @@
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.feature.development": "1.0.1",
+<<<<<<< HEAD
     "com.unity.probuilder": "5.2.2",
+=======
+>>>>>>> 82d24ce08c83b0e707b8f496fdd21b79cf9c1c69
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.6",
     "com.unity.ugui": "1.0.0",

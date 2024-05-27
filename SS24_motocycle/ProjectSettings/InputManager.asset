@@ -111,7 +111,11 @@ InputManager:
     altPositiveButton: 
     gravity: 0
     dead: 0
+<<<<<<< HEAD
     sensitivity: 0.02
+=======
+    sensitivity: 0.1
+>>>>>>> 82d24ce08c83b0e707b8f496fdd21b79cf9c1c69
     snap: 0
     invert: 0
     type: 1
@@ -127,7 +131,11 @@ InputManager:
     altPositiveButton: 
     gravity: 0
     dead: 0
+<<<<<<< HEAD
     sensitivity: 0.02
+=======
+    sensitivity: 0.1
+>>>>>>> 82d24ce08c83b0e707b8f496fdd21b79cf9c1c69
     snap: 0
     invert: 0
     type: 1
@@ -293,4 +301,7 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 0
+<<<<<<< HEAD
   m_UsePhysicalKeys: 1
+=======
+>>>>>>> 82d24ce08c83b0e707b8f496fdd21b79cf9c1c69
