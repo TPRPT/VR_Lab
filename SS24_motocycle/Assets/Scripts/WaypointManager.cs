@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -8,8 +9,7 @@ using UnityEngine.UI;
 
 public class WaypointManager : MonoBehaviour
 {
-    public GameObject PrefabWP;
-    public GameObject currentWP;
+    public GameObject prefabWP, currentWP, prefabMP, mapPoint, parentWP;
     public Transform[] waypoints;
     public Transform position;
     
@@ -57,7 +57,11 @@ public class WaypointManager : MonoBehaviour
             position = newWPs[UnityEngine.Random.Range(0, newWPs.Count)];
         }
 
-        currentWP = Instantiate(PrefabWP, position.position, position.rotation);
+        currentWP = Instantiate(prefabWP, position.position, position.rotation);
+        mapPoint = Instantiate(prefabMP, position.position + new Vector3(0,35,0), position.rotation);
+
+        currentWP.transform.parent = parentWP.transform;
+        mapPoint.transform.parent = currentWP.transform;
     }
 
     void Timer()

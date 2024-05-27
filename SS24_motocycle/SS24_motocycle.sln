@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTC.ViveInputUtility.Editor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{583F0F54-E745-EA8B-9FC5-7E3A682872E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{8FAEE24E-A504-D02E-411D-553A4E8F7DE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{583F0F54-E745-EA8B-9FC5-7E3A682872E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{583F0F54-E745-EA8B-9FC5-7E3A682872E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{583F0F54-E745-EA8B-9FC5-7E3A682872E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FAEE24E-A504-D02E-411D-553A4E8F7DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FAEE24E-A504-D02E-411D-553A4E8F7DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FAEE24E-A504-D02E-411D-553A4E8F7DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FAEE24E-A504-D02E-411D-553A4E8F7DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
