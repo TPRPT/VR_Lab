@@ -14,11 +14,7 @@ public class Controller : MonoBehaviour
     public AnimationCurve turningCurve;
 
 
-<<<<<<< HEAD
     public float power, maxSpeed, acceleration, steerStrength, gravity, bikeTiltIncrement = .09f,
-=======
-    public float maxSpeed, acceleration, steerStrength, gravity, bikeTiltIncrement = .09f,
->>>>>>> 82d24ce08c83b0e707b8f496fdd21b79cf9c1c69
         zTiltAngle = 45f, handleRotVal = 30f, handleRotSpeed = .15f, tyreRotSpeed = 10000f,
         norDrag = 2f, driftDrag = 0.5f;
     
@@ -27,10 +23,6 @@ public class Controller : MonoBehaviour
     public float minPitch = 0;
     public float maxPitch;
     public LayerMask derivableSurface;
-<<<<<<< HEAD
-=======
-
->>>>>>> 82d24ce08c83b0e707b8f496fdd21b79cf9c1c69
     
     // Start is called before the first frame update
     void Start()
@@ -44,7 +36,6 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         moveInput = GameObject.Find("Motocycle").GetComponent<MotorcycleControlVR>().GetAceleration();
         steerInput = GameObject.Find("Motocycle").GetComponent<MotorcycleControlVR>().GetSteering() * power;
 
@@ -52,9 +43,6 @@ public class Controller : MonoBehaviour
         // steerInput = Input.GetAxis("Horizontal");
 
         // Debug.Log("move:" + moveInput + "steer" + steerInput);
-=======
-        Driving();
->>>>>>> 82d24ce08c83b0e707b8f496fdd21b79cf9c1c69
 
         transform.position = sphereRB.transform.position;
         BikeBody.MoveRotation(transform.rotation);
@@ -73,15 +61,6 @@ public class Controller : MonoBehaviour
         EngineSound();
     }
 
-<<<<<<< HEAD
-=======
-    void Driving()
-    {
-        moveInput = Input.GetAxis("Vertical");
-        steerInput += Input.GetAxis("Mouse X") / 10;
-    }
-
->>>>>>> 82d24ce08c83b0e707b8f496fdd21b79cf9c1c69
     void Movement()
     {
         if (Grounded())
