@@ -42,7 +42,7 @@ public class Controller : MonoBehaviour
         // moveInput = Input.GetAxis("Vertical");
         // steerInput = Input.GetAxis("Horizontal");
 
-        // Debug.Log("move:" + moveInput + "steer" + steerInput);
+        Debug.Log("move:" + moveInput + "steer" + steerInput);
 
         transform.position = sphereRB.transform.position;
         BikeBody.MoveRotation(transform.rotation);
