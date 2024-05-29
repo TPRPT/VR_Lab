@@ -19,4 +19,4 @@ MonoBehaviour:
   m_enableWaveElectronicHand: 0
   m_showWaveElectronicHandWithController: 0
   m_activateWaveTrackerSubmodule: 1
-  m_initializeOnStartup: 0
+  m_initializeOnStartup: 1

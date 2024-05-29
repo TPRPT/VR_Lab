@@ -9,13 +9,14 @@ public class MotorcycleControlVR : MonoBehaviour
     public HandRole rightHand = HandRole.RightHand;
     public HandRole leftHand = HandRole.LeftHand;
     public ControllerButton button = ControllerButton.Trigger;
+    public ControllerAxis trigger = ControllerAxis.Trigger;
     public Transform[] hands;
     public Transform pivot;
     
 
     public float GetAceleration()
     {
-        // return ViveInput.GetAxis(rightHand, axis);
+        return ViveInput.GetAxis(rightHand, trigger) - ViveInput.GetAxis(leftHand, trigger);
 
         if(Input.GetKey(KeyCode.O))
             return 1;
