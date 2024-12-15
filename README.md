@@ -1,4 +1,9 @@
-# g3
+# HKA VR Lab - Virtual Reality for Industrial Application (IP 426)
+
+## Demo Video
+
+[![Video Label](http://img.youtube.com/vi/ezs79PpAFS0/0.jpg)](https://youtu.be/ezs79PpAFS0)
+
 
 
 
