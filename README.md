@@ -1,98 +1,104 @@
-# HKA VR Lab - Virtual Reality for Industrial Application (IP 426)
+<p align="center">
+  <a href="https://youtu.be/ezs79PpAFS0">
+    <img src="http://img.youtube.com/vi/ezs79PpAFS0/0.jpg" alt="Demo">
+  </a>
+</p>
 
-## Demo Video
+# 🍕 Ding Dong, Pizza!
 
-[![Video Label](http://img.youtube.com/vi/ezs79PpAFS0/0.jpg)](https://youtu.be/ezs79PpAFS0)
+A VR motorcycle delivery game developed during an exchange program in Germany.  
+Players ride through a virtual city and deliver pizzas to designated locations within a limited time.
 
+---
 
+## 🎥 Demo Video
+https://youtu.be/ezs79PpAFS0
 
+---
 
-## Getting started
+## 🧠 Project Background
+This project was developed as part of  
+**HKA VR Lab – Virtual Reality for Industrial Application (IP 426, Summer 2024)**.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+Originally designed as a team project, the final implementation was completed individually.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+The goal was to create an immersive VR experience simulating motorcycle driving and delivery tasks.
 
-## Add your files
+---
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## 🎮 Gameplay
+- Navigate a small city using a motorcycle  
+- Use an in-game **map** to locate delivery points  
+- Delivery targets are marked with **blue pillars**  
+- Reach the destination before time runs out  
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/vr_ia/vria_2024_ss/g3.git
-git branch -M main
-git push -uf origin main
-```
+### ✅ Success
+- Deliver all pizzas within the time limit  
 
-## Integrate with your tools
+### ❌ Failure
+- Time runs out before completing deliveries  
 
-- [ ] [Set up project integrations](https://gitlab.com/vr_ia/vria_2024_ss/g3/-/settings/integrations)
+---
 
-## Collaborate with your team
+## 🎮 VR Interaction Design
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### 🕹️ Movement
+- **Right Trigger** → Move Forward  
+- **Left Trigger** → Move Backward  
 
-## Test and Deploy
+### 🏍️ Steering (Key Feature)
+- Steering is calculated based on the **relative position of both hands**  
+- Simulates real motorcycle handle movement  
 
-Use the built-in continuous integration in GitLab.
+This interaction is implemented using vector projection and dot product calculations in VR space.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+---
 
-***
+## 🛠️ Technical Implementation
 
-# Editing this README
+### VR Input System
+- Built using **VIVE Input Utility**  
+- Trigger input controls acceleration and deceleration  
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Motorcycle Physics
+- Arcade-style physics using Rigidbody  
+- Includes:
+  - Acceleration and braking  
+  - Tilt and steering dynamics  
+  - Wheel rotation and engine sound feedback  
 
-## Suggestions for a good README
+### UI System
+- Center message display with timed reset  
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Game Reset
+- Scene restart using VR controller input  
 
-## Name
-Choose a self-explaining name for your project.
+---
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## 🧩 Assets & Environment
+- Motorcycle model from Unity Asset Store  
+- City environment package for urban layout  
+- Custom placement of delivery points and UI elements  
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+---
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## 🚀 How to Run
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Requirements
+- Unity (2022.3 or later recommended)  
+- VR Headset (HTC Vive or compatible)  
+- SteamVR  
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### Steps
+1. Clone the repository  
+2. Open the project in Unity Hub  
+3. Open the main scene  
+4. Press Play or build for VR  
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+---
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## ⚠️ Notes
+- Originally built with an older Unity version  
+- Upgrading may require:
+  - API updates  
+  - VR plugin compatibility fixes  
